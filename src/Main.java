@@ -25,10 +25,12 @@ public class Main {
         readers[2] = new Reader("Сидоров З.Н.", 13579, "Физический", new Date(95, 6, 22), "+7-900-345-67-89");
         readers[3] = new Reader("Михайлова А.С.", 24680, "Математический", new Date(92, 11, 10), "+7-900-456-78-90");
         readers[4] = new Reader("Кузнецова М.Д.", 11223, "Биологический", new Date(98, 2, 5), "+7-900-567-89-01");
-        readers[0].takeBook(numberOfTakenBooks);
-        readers[1].takeBook(numberOfTakenBooks, takenBooks);
-        readers[3].returnBook(numberOfGivenBooks);
-        readers[4].returnBook(numberOfGivenBooks, givenBooks);
+        for (int i = 0; i < readers.length; i++){
+            readers[i].takeBook(numberOfTakenBooks);
+            readers[i].takeBook(numberOfTakenBooks, takenBooks);
+            readers[i].returnBook(numberOfGivenBooks);
+            readers[i].returnBook(numberOfGivenBooks, givenBooks);
+        }
     }
 }
 class Reader {
